@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:keepScreenOn="true"
+    tools:context=".LogInActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout       android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lable_layout"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true">
+
+                        <android.support.design.widget.TextInputLayout      android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            tools:layout_editor_absoluteY="0dp"
+                                                                            tools:layout_editor_absoluteX="8dp">
+
+                            <android.support.design.widget.TextInputEditText        android:id="@+id/txtUserName"
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:hint="Email Address"
+                                                                                    android:backgroundTint="@color/color_white"
+                                                                                    android:textColorHint="@color/color_white"
+                                                                                    android:inputType="textEmailAddress|text" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                        <android.support.design.widget.TextInputLayout      android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            tools:layout_editor_absoluteY="0dp"
+                                                                            tools:layout_editor_absoluteX="8dp">
+
+                            <android.support.design.widget.TextInputEditText        android:id="@+id/txtPassword"
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:layout_marginTop="30dp"
+                                                                                    android:hint="Password"
+                                                                                    android:inputType="textPassword" />
+
+                        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <Button         android:id="@+id/email_sign_in_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/signed_in"
+                    android:textSize="18dp"
+                    android:textColor="@color/color_white"
+                    android:background="@color/colorPrimary"
+                    android:layout_below="@+id/lable_layout" />
+
+</RelativeLayout>
